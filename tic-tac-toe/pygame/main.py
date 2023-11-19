@@ -20,20 +20,18 @@ pygame.display.set_caption('Tic-Tac-Toe')
 
 clock = pygame.time.Clock()
 
-class TicTacToe(pygame.sprite.Sprite):
-	
-	def __init__(self):
-		super().__init__()
+def my_init():
+	pass
 
-	def update(self):
-		pass
+def my_update(game):
+	pass
 
-	def draw(self, surface):
-		pass
-
-game = TicTacToe()
+def my_draw(game, screen):
+	pass
 
 def main():
+
+	game = my_init()
 
 	while True:
 
@@ -41,9 +39,9 @@ def main():
 			if event.type == pygame.QUIT:
 				pygame.quit()
 				sys.exit()
-		
-		game.update()
-		game.draw(screen)
+
+		my_update(game)
+		my_draw(game, screen)
 
 		pygame.display.update()
 		clock.tick(60)
